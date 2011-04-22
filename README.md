@@ -34,4 +34,4 @@ The great thing about extending the Core CI_Email class is the ability to not ha
 
 ##Contact
 
-If you'd like to request an update, report bugs or contact me for any other reason, email me at [jrtashjian@gmail.com](jrtashjian@gmail.com)
+If you'd like to request an update, report bugs or contact me for any other reason, email me at [jrtashjian@gmail.com](mailto:jrtashjian@gmail.com)
