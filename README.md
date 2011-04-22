@@ -30,7 +30,7 @@ Just make sure to load the Core CI_Email (email) class first.
 
 ###Sending an Email
 
-The great thing about extending the Core CI_Email class is the ability to not have to change the way you use the class! The only difference is that you will be using $this->postmark->send() instead of $this->email->send().
+The great thing about extending the Core CI_Email class is the ability to not have to change the way you use the class! The only difference is that you will be calling functions as $this->postmark->function_name() instead of $this->email->function_name().
 
 ##Contact
 
