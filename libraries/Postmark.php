@@ -106,14 +106,14 @@ class Postmark extends CI_Email {
 			$data['ReplyTo'] = $this->_headers['Reply-To'];
 		}
 
-		if( !empty($this->alt_message) )
-		{
-			$data['HtmlBody'] = $this->alt_message;
-		}
-
 		if( !empty($this->_body) )
 		{
-			$data['TextBody'] = $this->_body;
+			$data['HtmlBody'] = $this->_body;
+		}
+
+		if( !empty($this->alt_message) )
+		{
+			$data['TextBody'] = $this->alt_message;
 		}
 
 		if( !empty($this->tag) )
