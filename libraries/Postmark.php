@@ -106,14 +106,14 @@ class Postmark extends CI_Email {
 			$data['ReplyTo'] = $this->_headers['Reply-To'];
 		}
 
-		if( !empty($this->_body) )
+		if( $this->mailtype != 'html' )
 		{
-			$data['HtmlBody'] = $this->_body;
+			$data['TextBody'] = ($this->wordwrap === TRUE) ? $this->word_wrap($this->_body) : $this->_body;
 		}
-
-		if( !empty($this->alt_message) )
+		else
 		{
-			$data['TextBody'] = $this->alt_message;
+			$data['HtmlBody'] = $this->body;
+			$data['TextBody'] = ($this->wordwrap === TRUE) ? $this->word_wrap($this->alt_message) : $this->alt_message;
 		}
 
 		if( !empty($this->tag) )
