@@ -112,7 +112,7 @@ class Postmark extends CI_Email {
 		}
 		else
 		{
-			$data['HtmlBody'] = $this->body;
+			$data['HtmlBody'] = $this->_body;
 			$data['TextBody'] = ($this->wordwrap === TRUE) ? $this->word_wrap($this->alt_message) : $this->alt_message;
 		}
 
